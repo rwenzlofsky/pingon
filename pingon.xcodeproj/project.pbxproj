@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		53E31AF42CD01142002B9B7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53E31ADA2CD0113F002B9B7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53E31AE12CD0113F002B9B7C;
+			remoteInfo = pingon;
+		};
+		53E31AFE2CD01143002B9B7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53E31ADA2CD0113F002B9B7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53E31AE12CD0113F002B9B7C;
+			remoteInfo = pingon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		53E31AE22CD0113F002B9B7C /* pingon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pingon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53E31AF32CD01142002B9B7C /* pingonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pingonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53E31AFD2CD01143002B9B7C /* pingonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pingonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		53E31AE42CD0113F002B9B7C /* pingon */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = pingon;
+			sourceTree = "<group>";
+		};
+		53E31AF62CD01142002B9B7C /* pingonTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = pingonTests;
+			sourceTree = "<group>";
+		};
+		53E31B002CD01143002B9B7C /* pingonUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = pingonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53E31ADF2CD0113F002B9B7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53E31AF02CD01142002B9B7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53E31AFA2CD01143002B9B7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53E31AD92CD0113F002B9B7C = {
+			isa = PBXGroup;
+			children = (
+				53E31AE42CD0113F002B9B7C /* pingon */,
+				53E31AF62CD01142002B9B7C /* pingonTests */,
+				53E31B002CD01143002B9B7C /* pingonUITests */,
+				53E31AE32CD0113F002B9B7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53E31AE32CD0113F002B9B7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53E31AE22CD0113F002B9B7C /* pingon.app */,
+				53E31AF32CD01142002B9B7C /* pingonTests.xctest */,
+				53E31AFD2CD01143002B9B7C /* pingonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53E31AE12CD0113F002B9B7C /* pingon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53E31B072CD01143002B9B7C /* Build configuration list for PBXNativeTarget "pingon" */;
+			buildPhases = (
+				53E31ADE2CD0113F002B9B7C /* Sources */,
+				53E31ADF2CD0113F002B9B7C /* Frameworks */,
+				53E31AE02CD0113F002B9B7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				53E31AE42CD0113F002B9B7C /* pingon */,
+			);
+			name = pingon;
+			packageProductDependencies = (
+			);
+			productName = pingon;
+			productReference = 53E31AE22CD0113F002B9B7C /* pingon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53E31AF22CD01142002B9B7C /* pingonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53E31B0A2CD01143002B9B7C /* Build configuration list for PBXNativeTarget "pingonTests" */;
+			buildPhases = (
+				53E31AEF2CD01142002B9B7C /* Sources */,
+				53E31AF02CD01142002B9B7C /* Frameworks */,
+				53E31AF12CD01142002B9B7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53E31AF52CD01142002B9B7C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				53E31AF62CD01142002B9B7C /* pingonTests */,
+			);
+			name = pingonTests;
+			packageProductDependencies = (
+			);
+			productName = pingonTests;
+			productReference = 53E31AF32CD01142002B9B7C /* pingonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		53E31AFC2CD01143002B9B7C /* pingonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53E31B0D2CD01143002B9B7C /* Build configuration list for PBXNativeTarget "pingonUITests" */;
+			buildPhases = (
+				53E31AF92CD01143002B9B7C /* Sources */,
+				53E31AFA2CD01143002B9B7C /* Frameworks */,
+				53E31AFB2CD01143002B9B7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53E31AFF2CD01143002B9B7C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				53E31B002CD01143002B9B7C /* pingonUITests */,
+			);
+			name = pingonUITests;
+			packageProductDependencies = (
+			);
+			productName = pingonUITests;
+			productReference = 53E31AFD2CD01143002B9B7C /* pingonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53E31ADA2CD0113F002B9B7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					53E31AE12CD0113F002B9B7C = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					53E31AF22CD01142002B9B7C = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 53E31AE12CD0113F002B9B7C;
+					};
+					53E31AFC2CD01143002B9B7C = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 53E31AE12CD0113F002B9B7C;
+					};
+				};
+			};
+			buildConfigurationList = 53E31ADD2CD0113F002B9B7C /* Build configuration list for PBXProject "pingon" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53E31AD92CD0113F002B9B7C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 53E31AE32CD0113F002B9B7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53E31AE12CD0113F002B9B7C /* pingon */,
+				53E31AF22CD01142002B9B7C /* pingonTests */,
+				53E31AFC2CD01143002B9B7C /* pingonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53E31AE02CD0113F002B9B7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53E31AF12CD01142002B9B7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53E31AFB2CD01143002B9B7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53E31ADE2CD0113F002B9B7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53E31AEF2CD01142002B9B7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53E31AF92CD01143002B9B7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53E31AF52CD01142002B9B7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53E31AE12CD0113F002B9B7C /* pingon */;
+			targetProxy = 53E31AF42CD01142002B9B7C /* PBXContainerItemProxy */;
+		};
+		53E31AFF2CD01143002B9B7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53E31AE12CD0113F002B9B7C /* pingon */;
+			targetProxy = 53E31AFE2CD01143002B9B7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		53E31B052CD01143002B9B7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		53E31B062CD01143002B9B7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		53E31B082CD01143002B9B7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = pingon/pingon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"pingon/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		53E31B092CD01143002B9B7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = pingon/pingon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"pingon/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		53E31B0B2CD01143002B9B7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pingon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pingon";
+			};
+			name = Debug;
+		};
+		53E31B0C2CD01143002B9B7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pingon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pingon";
+			};
+			name = Release;
+		};
+		53E31B0E2CD01143002B9B7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = pingon;
+			};
+			name = Debug;
+		};
+		53E31B0F2CD01143002B9B7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = pingon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53E31ADD2CD0113F002B9B7C /* Build configuration list for PBXProject "pingon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53E31B052CD01143002B9B7C /* Debug */,
+				53E31B062CD01143002B9B7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53E31B072CD01143002B9B7C /* Build configuration list for PBXNativeTarget "pingon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53E31B082CD01143002B9B7C /* Debug */,
+				53E31B092CD01143002B9B7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53E31B0A2CD01143002B9B7C /* Build configuration list for PBXNativeTarget "pingonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53E31B0B2CD01143002B9B7C /* Debug */,
+				53E31B0C2CD01143002B9B7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53E31B0D2CD01143002B9B7C /* Build configuration list for PBXNativeTarget "pingonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53E31B0E2CD01143002B9B7C /* Debug */,
+				53E31B0F2CD01143002B9B7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53E31ADA2CD0113F002B9B7C /* Project object */;
+}
