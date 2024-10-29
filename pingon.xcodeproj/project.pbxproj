@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		534FE3C12CD0243400B3C8FF /* SwiftyPing in Frameworks */ = {isa = PBXBuildFile; productRef = 534FE3C02CD0243400B3C8FF /* SwiftyPing */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		53E31AF42CD01142002B9B7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				534FE3C12CD0243400B3C8FF /* SwiftyPing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = pingon;
 			packageProductDependencies = (
+				534FE3C02CD0243400B3C8FF /* SwiftyPing */,
 			);
 			productName = pingon;
 			productReference = 53E31AE22CD0113F002B9B7C /* pingon.app */;
@@ -175,13 +181,16 @@
 				TargetAttributes = {
 					53E31AE12CD0113F002B9B7C = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
 					};
 					53E31AF22CD01142002B9B7C = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
 						TestTargetID = 53E31AE12CD0113F002B9B7C;
 					};
 					53E31AFC2CD01143002B9B7C = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
 						TestTargetID = 53E31AE12CD0113F002B9B7C;
 					};
 				};
@@ -195,6 +204,9 @@
 			);
 			mainGroup = 53E31AD92CD0113F002B9B7C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				534FE3BF2CD0243400B3C8FF /* XCRemoteSwiftPackageReference "SwiftyPing" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 53E31AE32CD0113F002B9B7C /* Products */;
 			projectDirPath = "";
@@ -392,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = pingon/pingon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -408,6 +421,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "pingon/pingon-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "pingon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -417,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = pingon/pingon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -433,6 +450,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "pingon/pingon-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "pingon-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -441,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -449,6 +469,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "pingonUITests/pingonTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pingon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pingon";
 			};
@@ -458,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -466,6 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "pingonUITests/pingonTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pingon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pingon";
 			};
@@ -474,6 +498,7 @@
 		53E31B0E2CD01143002B9B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -481,6 +506,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "pingonUITests/pingonUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = pingon;
 			};
@@ -489,6 +516,7 @@
 		53E31B0F2CD01143002B9B7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -496,6 +524,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dwhpro.pingonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "pingonUITests/pingonUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = pingon;
 			};
@@ -541,6 +570,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		534FE3BF2CD0243400B3C8FF /* XCRemoteSwiftPackageReference "SwiftyPing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/samiyr/SwiftyPing";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		534FE3C02CD0243400B3C8FF /* SwiftyPing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 534FE3BF2CD0243400B3C8FF /* XCRemoteSwiftPackageReference "SwiftyPing" */;
+			productName = SwiftyPing;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 53E31ADA2CD0113F002B9B7C /* Project object */;
 }
