@@ -1,5 +1,7 @@
 import SwiftUI
 
+// Test
+
 class PingManager: NSObject, ObservableObject {
     @Published var pingResult: String = ""
     @Published var currentHost: String = ""
