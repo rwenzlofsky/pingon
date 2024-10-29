@@ -1,6 +1,6 @@
 import SwiftUI
 
-// Test
+// Test 2
 
 class PingManager: NSObject, ObservableObject {
     @Published var pingResult: String = ""
