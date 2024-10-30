@@ -1,49 +1,60 @@
 import Foundation
 import Combine
 
-class PingManager: ObservableObject {
-    @Published var pingResult: String = ""       // Holds the latency result in milliseconds
-    @Published var isPinging: Bool = false       // Tracks whether a ping is ongoing
-    var currentHost: String = ""                 // Stores the currently pinged host
-    private var pingTimer: Timer?                // Timer to manage repeated ping calls
-    private var stopPingDelay: DispatchWorkItem? // Delayed work item for setting "Ping stopped"
+/// Manages simultaneous pings for multiple clients.
+class MultiPingManager: ObservableObject {
+    @Published var pingResults: [String: [Int]] = [:]  // Dictionary to store arrays of ping results for each client
+    @Published var isPingingAll: Bool = false           // Tracks whether all clients are being pinged
     
-    // Start pinging a given host
-    func startPing(host: String) {
-        stopPing(updateResult: false)  // Stop any ongoing ping without clearing result immediately
+    private var pingTimers: [String: Timer] = [:]       // Dictionary to hold a timer for each client
+    
+    /// Starts pinging all specified hosts by creating a timer for each client.
+    func startPingAll(clients: [TailscaleClient]) {
+        stopPingAll()  // Stop any existing pings first
         
-        self.currentHost = host
-        self.isPinging = true
-        
-        // Start a timer to simulate pinging every second
-        pingTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            guard self.isPinging else {
-                timer.invalidate()
-                return
-            }
+        // Set up individual timers for each client
+        for client in clients {
+            let clientID = client.ipAddress
+            self.pingResults[clientID] = []  // Initialize empty array for each client
             
-            // Simulate round-trip time (RTT) for the ping in milliseconds, formatted as an integer
-            let rtt = Int(Double.random(in: 20...100))  // Replace with actual RTT calculation if available
-            self.pingResult = "\(rtt) ms"  // Update ping result without decimals
-            print("Ping to \(host): RTT = \(rtt) ms")
+            // Schedule a timer for each client to ping every 1.5 seconds
+            pingTimers[clientID] = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { [weak self] timer in
+                guard let self = self else {
+                    timer.invalidate()
+                    return
+                }
+                
+                // Simulate a round-trip time (RTT) in milliseconds
+                let rtt = Int.random(in: 20...100)
+                
+                // Append RTT to the ping results array, keeping only the last 15 results
+                self.pingResults[clientID, default: []].append(rtt)
+                if self.pingResults[clientID]?.count ?? 0 > 15 {
+                    self.pingResults[clientID]?.removeFirst()
+                }
+                
+                print("Ping to \(clientID): RTT = \(rtt) ms")
+            }
+        }
+        
+        isPingingAll = true
+    }
+    
+    /// Stops pinging all clients by invalidating all timers and clearing results.
+    func stopPingAll() {
+        for timer in pingTimers.values {
+            timer.invalidate()
+        }
+        pingTimers.removeAll()
+        isPingingAll = false
+        
+        // Set all results to an empty array
+        for clientID in pingResults.keys {
+            pingResults[clientID] = []
         }
     }
     
-    // Stop the current ping with an option to delay the "Ping stopped" result
-    func stopPing(updateResult: Bool = true) {
-        pingTimer?.invalidate()  // Invalidate the timer to stop further pings
-        pingTimer = nil
-        isPinging = false
-        
-        // Cancel any previous delayed work
-        stopPingDelay?.cancel()
-        
-        if updateResult {
-            // Create a delayed task to update `pingResult` if no new ping starts
-            stopPingDelay = DispatchWorkItem { [weak self] in
-                self?.pingResult = "Ping stopped"
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: stopPingDelay!)
-        }
+    deinit {
+        stopPingAll()
     }
 }

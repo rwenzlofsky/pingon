@@ -13,7 +13,7 @@ class TailscaleManager: ObservableObject {
     @Published var clients: [TailscaleClient] = []  // Now stores TailscaleClient objects
     
     private var cancellables = Set<AnyCancellable>()
-    private let apiKey = "tskey-api-k4n8eUxW8b11CNTRL-92baUaDmvTdoMK8pA3T8ddmLVR9xMPbM"
+    private let apiKey = "tskey-api-kskvoRAoAK11CNTRL-Tesd97W2KGUyo4dtS6DcRUsAFzrida3o"
     
     func fetchClients() {
         guard let url = URL(string: "https://api.tailscale.com/api/v2/tailnet/lemur-saurolophus.ts.net/devices") else {

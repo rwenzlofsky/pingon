@@ -1,75 +1,62 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var serverAddress: String = "1.1.1.1"
-    @StateObject private var pingManager = PingManager()
+    @StateObject private var pingManager = MultiPingManager()
     @StateObject private var tailscaleManager = TailscaleManager()
-    
-    // Track the currently selected client IP for pinging
-    @State private var selectedClientIP: String? = nil
-    
-    // Define grid layout with flexible columns
-    let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
     
     var body: some View {
         VStack(spacing: 20) {
-    
-            
-            Text("Pinging: \(pingManager.currentHost.isEmpty ? "None" : pingManager.currentHost)")
-                .font(.subheadline)
-                .foregroundColor(.gray)
-                .padding()
-
-            // Display latency with large font and animated mechanical clock effect
-            Text(pingManager.pingResult)
-                .font(.system(size: 72, weight: .bold, design: .monospaced)) // Larger, monospaced font
-                .transition(.asymmetric(insertion: .scale, removal: .opacity)) // Scale and fade effects
-                .animation(.easeInOut(duration: 0.3), value: pingManager.pingResult) // Smooth animation
-                .padding()
-            
-            // Client Count Debugging
-            Text("Number of clients: \(tailscaleManager.clients.count)")
-                .padding()
-            
-            // Grid of Client Buttons
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(tailscaleManager.clients) { client in
-                        Button(action: {
-                            if selectedClientIP == client.ipAddress {
-                                // If the selected client IP is already being pinged, stop pinging
-                                pingManager.stopPing()
-                                selectedClientIP = nil
-                            } else {
-                                // Stop any ongoing ping before switching to a new client
-                                pingManager.stopPing()
-                                pingManager.startPing(host: client.ipAddress)
-                                selectedClientIP = client.ipAddress
-                            }
-                        }) {
-                            Text(client.hostname)
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(selectedClientIP == client.ipAddress ? Color.red : Color.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
+            // List of Clients with Individual Ping Results and Bar Charts
+            List(tailscaleManager.clients) { client in
+                HStack(spacing: 10) { // Reduced spacing between items
+                    // Client name
+                    Text(client.hostname)
+                        .font(.headline)
+                    
+                    Spacer()
+                    
+                    // Bar chart showing last 15 ping results for each client
+                    if let pings = pingManager.pingResults[client.ipAddress] {
+                        PingBarChart(pingResults: pings)
+                            .frame(width: 150, height: 20)
+                    } else {
+                        Text("No data")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
                     }
+                    
+                    // Display the latest ping result in milliseconds after the bar chart, with animation
+                    Text("\(pingManager.pingResults[client.ipAddress]?.last ?? 0) ms")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .transition(.scale) // Scale effect for smooth entry
+                        .animation(.easeInOut(duration: 0.3), value: pingManager.pingResults[client.ipAddress]?.last) // Animate on change
                 }
-                .padding()
+                .padding(.vertical, 5)  // Decrease vertical padding for each list item
             }
-            .frame(maxHeight: 400)  // Adjust grid height as needed
+            .frame(maxHeight: 400)  // Adjust list height as needed
             
+            // Simplified Start/Stop All Pings Button
+            Button(action: {
+                if pingManager.isPingingAll {
+                    pingManager.stopPingAll()
+                } else {
+                    pingManager.startPingAll(clients: tailscaleManager.clients)
+                }
+            }) {
+                Text(pingManager.isPingingAll ? "Stop" : "Start")
+                    .font(.body)
+                    .padding(5) // Smaller padding for a compact look
+            }
+            .buttonStyle(.bordered) // Simple bordered button style
+            .padding(.top, 10) // Small padding above button
+
             Spacer()
         }
         .padding()
-        .frame(minWidth: 500, minHeight: 600)  // Set the minimum window size
+        .frame(minWidth: 500, minHeight: 600)
         .onAppear {
-            tailscaleManager.fetchClients()  // Load clients on app start
+            tailscaleManager.fetchClients()
         }
     }
 }
